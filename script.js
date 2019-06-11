@@ -65,9 +65,9 @@ function fetchData(){
         for(var key in data.matches){
           match = data.matches[key]
           if(match.type == "ODI"){
-            amtext += '<a href="'+window.location.origin+'?m='+match.id.toString()+'/"> '+match.team1.name+' vs '+match.team2.name+'</a>&emsp;&emsp;&emsp;';
+            amtext += '<a href="'+window.location.origin+window.location.pathname+'?m='+match.id.toString()+'/"> '+match.team1.name+' vs '+match.team2.name+'</a>&emsp;&emsp;&emsp;';
+            window.key = match.id
           }
-          window.key = match.id
         }
         set('am',amtext)
       });
@@ -80,7 +80,7 @@ function loadOldMatches(id){
     fetch('https://corsbypass.000webhostapp.com?url=https://www.cricbuzz.com/match-api/'+id+'/commentary.json').then(response => {
       response.json().then(function(match) {
         console.log(match)
-        window.pmtext += '<a href="'+window.location.origin+'?m='+match.id.toString()+'/"> '+match.team1.name+' vs '+match.team2.name+'</a>&emsp;&emsp;&emsp;';
+        window.pmtext += '<a href="'+window.location.origin+window.location.pathname+'?m='+match.id.toString()+'/"> '+match.team1.name+' vs '+match.team2.name+'</a>&emsp;&emsp;&emsp;';
         set('pm', window.pmtext)
         if(data.id == undefined){
           data.id = window.key - 2
