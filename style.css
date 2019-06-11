@@ -1,0 +1,277 @@
+body{
+  margin:0px;
+  font-family: roboto;
+  background: black;
+  color: #fff;
+}
+#am > a:link, #am > a:visited, #pm > a:link, #pm > a:visited{
+  color: #2196f3
+}
+
+#am > a:active, #am > a:hover, #pm > a:active, #pm > a:hover{
+  color: orangered
+}
+.scoreboard{
+  background: black;
+  height: 100px;
+  position: absolute;
+  bottom: 60px;
+  width: 100%;
+}
+.scorebox {
+  background: linear-gradient(white,rgb(210,210,210));
+  height: calc( 100% - 8px);
+  margin: 4px 0px;
+  border-radius: 200px;
+  width: calc( 100% - 400px );
+  display: inline-block;
+}
+
+.countryBox{
+  background: linear-gradient(white,rgb(210,210,210));
+  height: calc( 100% - 8px);
+  margin: 4px 0px;
+  width: 200px;
+  display: inline-block;
+}
+
+.cB1{
+  border-radius: 0px 200px 200px 0px;
+}
+
+.cB2{
+  border-radius: 200px 0px 0px 200px;
+}
+
+.runScoreBox{
+  background: rgb(20,20,75);
+  height: calc( 100% - 8px);
+  margin: 4px;
+  border-radius: 45px;
+  width: 430px;
+  color:white;
+}
+
+.half-top{
+  background: rgb(35,39,128);
+  height: 45px;
+  width: 430px;
+}
+
+.powerPlayBox{
+  background: repeating-linear-gradient(to right, rgb(20,20,75) 60%, rgb(62,145,215));
+  height: 100%;
+  width: 350px;
+  border-radius: 0px 40px 40px 0px;
+}
+
+.teamScore{
+  background: linear-gradient(to right, rgb(35,39,128) , rgb(20,20,75), rgb(210,30,65));
+  height: 100%;
+  width: 290px;
+  border-radius: 0px 40px 40px 0px;
+}
+
+.batScore{
+  font-size: 27px;
+  margin-left: 30px;
+  line-height: 51px;
+}
+
+div{
+  overflow: hidden;
+  display: inline-block;
+}
+
+.powerPlaySpan{
+  display: inline-block;
+  font-size: 27px;
+  bottom: 10px;
+  margin-left: 4px;
+  position: relative;
+  bottom: 11px;
+  font-weight: 500;
+}
+
+.oversSpan{
+  display: inline-block;
+  font-size: 27px;
+  margin-left: 6px;
+  position: relative;
+  bottom: 9px; 
+}
+
+.bottomPad{
+  vertical-align: middle;
+  line-height: 37px;
+  font-size: 18px;
+  display: block;
+  text-align: center;
+}
+
+.flagImg{
+  height: 55px;
+  width: 90px;
+}
+
+.flagImg
+{
+    position:relative;
+    -webkit-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+       -moz-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+            box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+}
+.flagImg:before, .flagImg:after
+{
+    content:"";
+    position:absolute;
+    z-index:-1;
+    -webkit-box-shadow:0 0 20px rgba(0,0,0,0.8);
+    -moz-box-shadow:0 0 20px rgba(0,0,0,0.8);
+    box-shadow:0 0 20px rgba(0,0,0,0.8);
+    top:10px;
+    bottom:10px;
+    left:0;
+    right:0;
+    -moz-border-radius:100px / 10px;
+    border-radius:100px / 10px;
+}
+.flagImg:after
+{
+    right:10px;
+    left:auto;
+    -webkit-transform:skew(8deg) rotate(3deg);
+       -moz-transform:skew(8deg) rotate(3deg);
+        -ms-transform:skew(8deg) rotate(3deg);
+         -o-transform:skew(8deg) rotate(3deg);
+            transform:skew(8deg) rotate(3deg);
+}
+
+.flagL{
+  background: url('ind.png');
+  background-size: cover;
+  margin: 20px 0px 20px 75px;
+}
+
+.flagR{
+  background: url('aus.png');
+  background-size: cover;
+  margin: 20px 0px 20px 28px;
+}
+
+.battingBoys{
+  float: left;
+  color: rgb(35,39,128);
+  font-size: 20px;
+  margin-left: 50px;
+  margin-right: 20px;
+  margin-top: 17px;
+}
+
+.battingBoys .name{
+  width: 180px;
+  padding: 3px;
+  padding-bottom:0px;
+  font-weight: 500;
+  vertical-align: bottom;
+}
+
+.battingBoys .run{
+  width: 35px;
+  text-align: right;
+  font-weight: 600;
+  vertical-align: bottom;
+}
+
+.battingBoys .balls{
+  width: 35px;
+  font-size: 17px;
+  font-weight: 500;
+  vertical-align: bottom;
+  padding-bottom: 3px;
+  padding-left: 5px;
+}
+
+.arrow-right{
+  width: 0; 
+  height: 0; 
+  border-top: 7px solid transparent;
+  border-bottom: 7px solid transparent;
+  
+  border-left: 7px solid transparent;
+}
+
+
+.arrow-right.active{
+  border-left-color: rgb(210,30,65);
+  margin-top: 6px;
+}
+
+.bollingBoys{
+  float: right;
+  color: rgb(35,39,128);
+  font-size: 20px;
+  margin-left: 0px;
+  margin-right: 50px;
+  margin-top: 17px;
+}
+
+.bollingBoys .name{
+  width: 190px;
+  padding: 3px;
+  font-weight: 500;
+  vertical-align: bottom;
+}
+
+.bollingBoys .record{
+  text-align: right;
+  font-weight: 600;
+  vertical-align: bottom;
+}
+
+.bollingBoys .overs{
+  font-size: 17px;
+  font-weight: 500;
+  vertical-align: bottom;
+  padding-bottom: 3px;
+  padding-left: 5px;
+}
+
+.ball{
+  border: 1.5px solid rgb(35,39,128);
+  width: 22px;
+  height: 22px;
+  border-radius: 20px;
+}
+
+.ball.score {
+  background: rgb(35,39,128);
+  color: rgb(230,230,230);
+  text-align: center;
+  font-size: 16px;
+  line-height: 21px;
+  font-weight: 600;
+}
+
+.dot {
+  background: rgb(35,39,128);
+  height: 14px;
+  width: 14px;
+  border-radius: 15px;
+  margin: 4px;
+}
+
+span.vsteam {
+  font-size: 25px;
+  color: rgba(217, 237, 255, 0.62);
+  font-weight: 500;
+}
+
+.ball.mark {
+  background: rgb(35,39,128);
+  color: rgb(230,230,230);
+  font-size: 15px;
+  font-weight: 500;
+  text-align: center;
+  line-height: 24px;
+}
