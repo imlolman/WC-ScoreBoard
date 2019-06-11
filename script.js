@@ -1,5 +1,8 @@
 //https://corsbypass.000webhostapp.com?url=https://www.cricbuzz.com/match-api/livematches.json
 window.oldmatchesLoaded = 0
+data = {
+  id: 20284
+}
 function loadFlags(data){
   try{
   if(data.team1.name == "England"){
