@@ -1,8 +1,6 @@
 //https://corsbypass.000webhostapp.com?url=https://www.cricbuzz.com/match-api/livematches.json
 window.oldmatchesLoaded = 0
-data = {
-  id: 20284
-}
+
 function loadFlags(data){
   try{
   if(data.team1.name == "England"){
@@ -69,6 +67,7 @@ function fetchData(){
           if(match.type == "ODI"){
             amtext += '<a href="'+window.location.origin+'?m='+match.id.toString()+'/"> '+match.team1.name+' vs '+match.team2.name+'</a>&emsp;&emsp;&emsp;';
           }
+          window.key = match.id
         }
         set('am',amtext)
       });
@@ -83,6 +82,9 @@ function loadOldMatches(id){
         console.log(match)
         window.pmtext += '<a href="'+window.location.origin+'?m='+match.id.toString()+'/"> '+match.team1.name+' vs '+match.team2.name+'</a>&emsp;&emsp;&emsp;';
         set('pm', window.pmtext)
+        if(data.id == undefined){
+          data.id = window.key - 2
+        }
         if(localid < data.id){
           localid += 1
           console.log(localid)
