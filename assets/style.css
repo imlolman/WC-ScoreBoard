@@ -1,14 +1,18 @@
+html{
+  height:100%
+}
 body{
-  margin:0px;
-  font-family: roboto;
-  color: #fff;
-  background: rgb(20,20,75);
-  background: 
-    url('icc-wc-icon.png') no-repeat fixed center 100px/ 20%,
-    linear-gradient(to bottom, rgb(20,20,75) 20%, rgba(10,10,10,0) 100%)  ,
-    radial-gradient(ellipse at center,  rgb(20,20,75) 30%,#ee264d 100%);
-  background-repeat: no-repeat;
-  background-attachment: fixed;
+margin:0px;
+font-family: roboto;
+color: #fff;
+background: rgb(20,20,75);
+height:100%;
+background: 
+  url('icc-wc-icon.png') no-repeat fixed center 100px/ 20%,
+  linear-gradient(to bottom, rgb(20,20,75) 20%, rgba(10,10,10,0) 100%),
+  radial-gradient(ellipse at center,  rgb(20,20,75) 30%,#ee264d 100%);
+background-repeat: no-repeat;
+background-attachment: fixed;
 }
 .head > a:link, .head > a:visited{
   color: #2196f3
