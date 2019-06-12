@@ -9,6 +9,7 @@ body{
     radial-gradient(ellipse at center,  rgb(20,20,75) 30%,#ee264d 100%);
   background-repeat: no-repeat;
   background-attachment: fixed;
+  background-size: cover;
 }
 .head > a:link, .head > a:visited{
   color: #2196f3
