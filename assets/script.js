@@ -38,7 +38,7 @@ function loadFlags(data){
 
 function fetchData(){
     if(window.oldmatchesLoaded == 1){
-        fetch('https://corsbypass.000webhostapp.com?url=https://www.cricbuzz.com/match-api/'+parseInt(window.location.href.slice(-6,-1)).toString()+'/commentary.json').then(response => {
+        fetch('https://corsbypass.000webhostapp.com?url=https://www.cricbuzz.com/match-api/'+parseInt(window.location.href.replace('#','').slice(-6,-1)).toString()+'/commentary.json').then(response => {
         response.json().then(function(data) {
           console.log("Refreshed Score")
           window.data = data
@@ -54,8 +54,8 @@ function fetchData(){
         window.data = data
         putData(data)
         loadFlags(data)
-        window.pmtext = 'Older Matches: '
-        loadOldMatches(20236)
+        window.oldmatchesLoaded = 1
+        fetchData()
       });
     })
     fetch('https://corsbypass.000webhostapp.com?url=https://www.cricbuzz.com/match-api/livematches.json').then(response => {
@@ -89,9 +89,6 @@ function loadOldMatches(id){
           localid += 1
           console.log(localid)
           loadOldMatches(localid)
-        }else{
-           window.oldmatchesLoaded = 1
-           fetchData()
         }
     })
   })
@@ -221,6 +218,11 @@ function getplayer(players,id){
 
 function set(id,val){
   document.getElementById(id).innerHTML = val;
+}
+
+function show(){
+  window.pmtext = 'Older Matches: '
+  loadOldMatches(20236)
 }
 
 runIt()

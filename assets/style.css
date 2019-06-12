@@ -1,18 +1,23 @@
 body{
   margin:0px;
   font-family: roboto;
-  background: black;
   color: #fff;
+  background: rgb(20,20,75);
+  background: 
+    url('icc-wc-icon.png') no-repeat fixed center 100px/ 20%,
+    linear-gradient(to bottom, rgb(20,20,75) 20%, rgba(10,10,10,0) 100%),
+    radial-gradient(ellipse at center,  rgb(20,20,75) 30%,#ee264d 100%);
+  background-attachment: fixed;
 }
-#am > a:link, #am > a:visited, #pm > a:link, #pm > a:visited{
+.head > a:link, .head > a:visited{
   color: #2196f3
 }
 
-#am > a:active, #am > a:hover, #pm > a:active, #pm > a:hover{
-  color: orangered
+.head > a:active, .head > a:hover{
+  color: #ee264d;
 }
 .scoreboard{
-  background: black;
+  background: transparent;
   height: 100px;
   position: absolute;
   bottom: 60px;
@@ -66,7 +71,7 @@ body{
 }
 
 .teamScore{
-  background: linear-gradient(to right, rgb(35,39,128) , rgb(20,20,75), rgb(210,30,65));
+  background: linear-gradient(to right, rgb(35,39,128) , rgb(20,20,75), #ee264d);
   height: 100%;
   width: 290px;
   border-radius: 0px 40px 40px 0px;
@@ -203,7 +208,7 @@ div{
 
 
 .arrow-right.active{
-  border-left-color: rgb(210,30,65);
+  border-left-color: #ee264d;
   margin-top: 6px;
 }
 
