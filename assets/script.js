@@ -151,9 +151,9 @@ function putData(data){
       document.getElementsByClassName('teamScore')[0].style.textAlign = "center"
       }catch(err){}
     }
-    try{ set('overs_completed',data.score.batting.score.split('(')[1].replace(' Ovs)','')) }catch(err){}
+    try{ set('overs_completed',data.score.batting.score.split('(')[1].replace(' Ovs)','').replace(')','')) }catch(err){}
     try{ 
-      overs = parseInt(data.score.batting.score.split('(')[1].replace(' Ovs)',''))
+      overs = parseInt(data.score.batting.score.split('(')[1].replace(' Ovs)','').replace(')',''))
       pp=null
       if(overs <= 10){
         pp = 'P1'
