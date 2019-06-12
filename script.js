@@ -155,6 +155,17 @@ function putData(data){
       }catch(err){}
     }
     try{ set('overs_completed',data.score.batting.score.split('(')[1].replace(' Ovs)','')) }catch(err){}
+    try{ 
+      overs = parseInt(data.score.batting.score.split('(')[1].replace(' Ovs)',''))
+      pp=null
+      if(overs <= 10){
+        pp = 'P1'
+      }else if(overs <= 40){
+        pp = 'P2'
+      }else{
+        pp = 'P3'
+      }
+      set('powerPlay', pp) }catch(err){}
     try{ set('notice','RUN RATE '+data.score.crr) }catch(err){
       if(data.status != undefined){
         if(data.status != ""){
